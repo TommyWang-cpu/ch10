@@ -5,9 +5,9 @@ public class Fraction{
 	
 	
 	//constructor
-	public Fraction (){ //defult
-		numerator = 1;
-		denominatour = 1;
+	public Fraction(){
+		int num = (int)(Math.random()*9) + 1;
+		int denom = (int)(Math.random()*9) + 1;
 	}
 	
 	public Fraction (int n, int d){ //perimeterized constructor

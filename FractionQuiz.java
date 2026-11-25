@@ -1,87 +1,58 @@
 import java.util.Scanner;
 import java.util.Random;
 public class FractionQuiz{
-	public static void main(String[] args){
+	public static void main(String[   ] args){
+		
 		Scanner in = new Scanner(System.in);
-	}
-	
-	public Fraction (){ //defult
-		numerator = 1;
-		denominatour = 1;
-	}
-	
-	public Fraction (int n, int d){ //perimeterized constructor
-		numerator = n;
-		if ( d != 0){
-			denominatour = d;
-		} else
-			denominatour = 1;
-			System.out.println("Error: Denominator can't be zero");
-	}
-	
-	//behaviour method (accessor, mutator, helper)
-	public int getNum(){
-		return numerator;
-	}
-	public int getDenom(){
-		return denominatour;
-	}
-	
-	public Fraction(int n, int d){
-		setNum(n);
-		setDenom(d);
-	}						
-	
-	public Stirng toString(){ 
-		return numerator + "/" + denominatour;
-	}
-	
-	public void setNum(int n){
-		numerator = n;
-	}
-	
-	public void setDenom(int d){
-		if(d != 0){
-			denominatour = d;
-		} else 
-			denominatour = 0;
-			System.out.println("Error: denominatour can not be 0");
-	}	
-	
-	public static Fraction mult(Fraction a, Fraction b){
-		int n = a.getNum() * b.getNum();
-		int d = a.getDenom() * b.getDenom();
+		Random rdm = new Random();
 		
-		return new Fraction(n,d);
-	}
-	
-	public static Fraction divi(Fraction a, Fraction b){
-		int n = a.getNum() / b.getNum();
-		int d = a.getDenom() / b.getDenom();
+		String[] symbol = {"+","-","*","/"};
 		
-		return new Fraction(n,d);
-	}
-	
-	public Fraction(double x){
+		int correct = 0;
+		int answered = 0;
 		
-		double result = x;
-		
-		if (result ==  ){
-			System.out.println("Correct!");
+		System.out.println("Let the Fraction Quiz Begin. Answers should be in lowest terms. Good luck!");
+
+		while(true){
+			
+			Fraction f1 = new Fraction;
+			Fraction f2 = new Fraction;
+						
+			Fraction answer; 
+			
+			if(symbol[].equals("+"){
+				answer = f1.add(f2);
+				symbol = [0];
+			}
+			
+			if(symbol[].equals("-"){
+				answer = f1.subtract(f2);
+				symbol = [1];
+			}
+			
+			if(symbol[].equals("*"){
+				answer = f1.multiply(f2)
+				symbol = [2];
+			}
+			
+			if(symbol[].equals("/"){
+				answer = f1.divide(f2);
+				symbol = [3];
+			}
+			
+			System.out.println(f1 + " " + symbol + " " + f2 + "= ");
+			String input = in.nextLine; 
+			
+			if(answer.substring().equals(input){
+				System.out.println("Correct!");
+				correct ++;
+			}
 		}
 		
-		if (result ==  ){
-			System.out.println("Correct!");
-		}
-		if (result ==  ){
-			System.out.println("Correct!");
-		}
 		
-		if (result ==  ){
-			System.out.println("Correct!");
-		}
 		
-		System.out.println("Incorrect , the answer is " + );
 		
- 	}
+		System.out.println("You answered " + answered + "correctly, for a score of " + percent + " percent");	
+	}  
+	
 }
