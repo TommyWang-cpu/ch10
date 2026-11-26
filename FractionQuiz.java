@@ -33,17 +33,20 @@ public class FractionQuiz {
             } else {
                 answer = f1.divide(f2);
             }
+            
 
             System.out.print(f1 + " " + operator + " " + f2 + " = ");
             String input = in.nextLine();
 
-            if (input.subString().equals("quit")) {
+            if (input.substring(0).equals("quit")) {
                 break;
             }
-
+			
+			Fraction response = new Fraction(input);
+			
             answered++; 
 
-            if (answer.subString().equals(input)) {
+            if (response.equals(answer)) {
                 System.out.println("Correct!");
                 correct++;
             } else {
